@@ -245,6 +245,7 @@ main{max-width:720px;margin:0 auto;padding:16px}
     <button class="tab" data-target="p6">問6 医療介護</button>
     <button class="tab vocab-tab" data-target="vocab">単語帳</button>
     <button class="tab" data-target="interview" style="background:rgba(16,185,129,.3);color:#d1fae5">面接対策</button>
+    <button class="tab" data-target="policy" style="background:rgba(99,102,241,.3);color:#e0e7ff">医療政策</button>
   </nav>
 </header>
 
@@ -1605,8 +1606,139 @@ main{max-width:720px;margin:0 auto;padding:16px}
 
 <div class="nav-buttons">
   <button class="nav-btn prev" onclick="goTo('vocab')">← 単語帳</button>
-  <button class="nav-btn next" onclick="goTo('p1')">問題演習へ →</button>
+  <button class="nav-btn next" onclick="goTo('policy')">医療政策 →</button>
 </div>
+</div>
+
+<!-- ==================== 医療政策タブ ==================== -->
+<div class="problem-page" id="policy">
+  <h2>島根県保健医療計画 — 救急・災害医療の現状と課題</h2>
+  <p style="font-size:13px;color:var(--text-light);margin-bottom:16px">出典：島根県保健医療計画（令和6年4月）。面接で「なぜ島根大学か」「島根の医療課題は」と聞かれた時の背景知識として活用しよう。</p>
+
+  <!-- 全体サマリー -->
+  <div class="card">
+    <div class="card-title"><span class="icon">📋</span> 島根県の医療体制 ― 全体像</div>
+    <div style="font-size:14px;line-height:1.8">
+      <p>島根県は<strong>東西に細長い地形</strong>と<strong>中山間地域・離島</strong>を多く抱える県。医療提供体制の「分化と連携」が最重要テーマ。</p>
+      <table style="width:100%;border-collapse:collapse;font-size:13px;margin-top:8px">
+        <tr style="background:rgba(255,255,255,.05)">
+          <th style="padding:6px 8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">分類</th>
+          <th style="padding:6px 8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">内容</th>
+        </tr>
+        <tr><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">二次医療圏</td><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">松江・雲南・出雲・大田・浜田・益田・隠岐の7圏域</td></tr>
+        <tr><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">救命救急センター</td><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">4か所（目標：現状維持）</td></tr>
+        <tr><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">高度救命救急センター</td><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">島根県立中央病院（広範囲熱傷・急性中毒等24時間対応）</td></tr>
+        <tr><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">高度外傷センター（ACS）</td><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)"><strong>島根大学医学部附属病院（全国初・全国唯一）</strong></td></tr>
+        <tr><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">基幹災害拠点病院</td><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">島根県立中央病院（1か所）</td></tr>
+        <tr><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">地域災害拠点病院</td><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">二次医療圏ごと9か所</td></tr>
+        <tr><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">DMAT</td><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">10病院・20チーム・157名（2023年3月）</td></tr>
+        <tr><td style="padding:6px 8px">ドクターヘリ</td><td style="padding:6px 8px">2011年運航開始、島根県立中央病院が基地病院</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- 救急医療 現状と課題 -->
+  <div class="card">
+    <div class="card-title"><span class="icon">🚨</span> 救急医療（第６節） — 現状と課題</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">▶ 詳細を見る</button>
+    <div class="answer-content" style="display:none">
+      <div class="pattern" style="color:#f87171">【体制の基本構造】</div>
+      <p>初期救急（かかりつけ医・休日診療所） → 二次救急（救急告示病院24か所） → 三次救急（救命救急センター4か所）の3層構造。</p>
+      <p>三次救急の中でも、<strong>島根大学附属病院の高度外傷センター</strong>が重症外傷・専門的外傷治療を、<strong>島根県立中央病院（高度救命救急センター）</strong>が広範囲熱傷・急性中毒等を担い、連携して全県広域体制を維持。</p>
+
+      <div class="pattern" style="color:#f87171;margin-top:12px">【現状の課題 ― ここが面接で使える！】</div>
+      <ul style="line-height:2">
+        <li>⚠️ <strong>救命救急センターの専門医不足</strong>：救急・外科・産科等の専門医が不足し、現状体制の維持が困難。医師の働き方改革の影響も加わり、早急な対策が必要。</li>
+        <li>⚠️ <strong>軽症患者の二次・三次集中（コンビニ受診）</strong>：本来の重篤患者対応に支障をきたす。啓発が急務。</li>
+        <li>⚠️ <strong>初期救急の空洞化</strong>：診療所の減少で在宅当番医制を廃止した地域がある（鹿足郡など）。</li>
+        <li>⚠️ <strong>救急搬送困難事案の発生</strong>：高齢化で搬送件数が増加傾向。中山間地・離島での到達困難が課題。</li>
+        <li>⚠️ <strong>東西に細長い地形の壁</strong>：ドクターヘリ・防災ヘリ・病院救急車の連携で補完するも限界あり。</li>
+        <li>⚠️ <strong>転院搬送の円滑化</strong>：急性期後の受入先確保・連携体制の整備が不十分。</li>
+        <li>⚠️ <strong>院内救急救命士の活用</strong>：2021年の法改正で業務範囲が病院内に拡大。研修体制整備が必要。</li>
+        <li>⚠️ <strong>感染症まん延時の対応</strong>：コロナ禍で露呈した搬送受入体制の脆弱性。医療機関・消防の連携体制構築が急務。</li>
+      </ul>
+
+      <div class="pattern" style="color:#34d399;margin-top:12px">【数値目標（令和6年）】</div>
+      <p>救急告示病院：24か所維持 ／ 救命救急センター：4か所維持 ／ 救急救命士：370名→451名へ</p>
+    </div>
+  </div>
+
+  <!-- 災害医療 現状と課題 -->
+  <div class="card">
+    <div class="card-title"><span class="icon">🆘</span> 災害医療（第７節） — 現状と課題</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">▶ 詳細を見る</button>
+    <div class="answer-content" style="display:none">
+      <div class="pattern" style="color:#f87171">【フェーズ別体制】</div>
+      <table style="width:100%;border-collapse:collapse;font-size:13px;margin:8px 0">
+        <tr style="background:rgba(255,255,255,.05)">
+          <th style="padding:6px 8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">フェーズ</th>
+          <th style="padding:6px 8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">時期</th>
+          <th style="padding:6px 8px;text-align:left;border-bottom:1px solid rgba(255,255,255,.1)">主体</th>
+        </tr>
+        <tr><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">フェーズⅠ</td><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">発災直後〜3日</td><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)"><strong>DMAT・DPAT</strong>が病院支援・現場緊急処置</td></tr>
+        <tr><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">フェーズⅡ</td><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">1日〜1週間</td><td style="padding:6px 8px;border-bottom:1px solid rgba(255,255,255,.05)">市町村が医療救護所設置、県が医療救護班派遣</td></tr>
+        <tr><td style="padding:6px 8px">フェーズⅢ</td><td style="padding:6px 8px">3日〜1か月</td><td style="padding:6px 8px">医療救護班継続活動、DMATは感染症まん延時にも対応</td></tr>
+      </table>
+
+      <div class="pattern" style="color:#f87171;margin-top:12px">【現状の課題 ― ここが面接で使える！】</div>
+      <ul style="line-height:2">
+        <li>⚠️ <strong>DMAT隊員の高齢化・不足</strong>：157名・20チームは横ばいで推移。隊員の異動・退職により派遣できない事態が懸念される。</li>
+        <li>⚠️ <strong>原子力災害（島根原発）への対応</strong>：島根原発は全国で唯一、県庁所在地に最も近い原発。放射線被ばく医療の特殊体制が必要。</li>
+        <li>⚠️ <strong>NBCテロ等の特殊災害</strong>：後方支援体制の確立が課題。</li>
+        <li>⚠️ <strong>DHEAT・災害コーディネーター不足</strong>：保健医療福祉調整本部を動かす人材の育成が急務。</li>
+        <li>⚠️ <strong>中山間地・離島での搬送困難</strong>：ドクターヘリ・防災ヘリへの依存度が高く、悪天候時のバックアップが課題。</li>
+        <li>⚠️ <strong>災害拠点病院間の連携強化</strong>：通信環境・備蓄・搬送体制の機能強化が必要。</li>
+        <li>⚠️ <strong>感染症まん延時のDMAT派遣</strong>：コロナ禍を経て、感染症対応もDMATの役割に加わった。平時からの訓練が必要。</li>
+      </ul>
+
+      <div class="pattern" style="color:#34d399;margin-top:12px">【数値目標（令和6年）】</div>
+      <p>DMAT指定医療機関：10か所維持 ／ DMAT隊員：157名→増加へ ／ 災害拠点病院：10か所維持</p>
+    </div>
+  </div>
+
+  <!-- 面接での使い方 -->
+  <div class="card">
+    <div class="card-title"><span class="icon">🎤</span> 面接でこう使う — 「島根の医療課題を知っているか」</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">▶ 模範回答を見る</button>
+    <div class="answer-content" style="display:none">
+      <div class="pattern" style="color:#f87171">⚠️ 最頻出：「島根県の医療の課題は何だと思いますか？」</div>
+      <div style="background:rgba(255,255,255,.05);border-left:3px solid #60a5fa;padding:12px;margin:8px 0;border-radius:4px;font-size:14px;line-height:1.9">
+        島根県の最大の医療課題は<strong>医師偏在と地理的アクセス格差</strong>だと考えます。東西に細長い地形に中山間地域・離島を抱える中で、救急医療については、救命救急センターの専門医不足による体制維持の困難化と、軽症患者の集中によるコンビニ受診問題が深刻です。また、初期救急を担う診療所の減少で在宅当番医制が廃止される地域も出ています。<br>
+        災害医療の観点では、全国で唯一、県庁所在地に最も近い島根原発への対応という特殊な課題もあり、DMAT隊員の高齢化・人員不足が懸念されています。<br>
+        私が島根大学を志望する理由のひとつも、こうした課題に正面から向き合うために、全国唯一のACS講座と高度外傷センターで外傷診療・災害医療を学べる環境があるからです。
+      </div>
+      <p class="note">💡 「課題を知っている → だから島根大学のACS・災害医療教育が必要」と繋げるのが完璧な流れ。</p>
+
+      <div class="pattern" style="color:#f87171;margin-top:12px">「島根大学附属病院の役割は？」</div>
+      <div style="background:rgba(255,255,255,.05);border-left:3px solid #60a5fa;padding:12px;margin:8px 0;border-radius:4px;font-size:14px;line-height:1.9">
+        島根大学医学部附属病院は、高度外傷センター（全国初・全国唯一）と救命救急センターを有し、島根県立中央病院（高度救命救急センター・基幹災害拠点病院・ドクターヘリ基地病院）と連携して、全県における広域的な三次救急・災害医療の要を担っています。また、DMAT指定医療機関として、発災直後の緊急医療対応においても中心的役割を果たしています。
+      </div>
+    </div>
+  </div>
+
+  <!-- 全体課題まとめ -->
+  <div class="card">
+    <div class="card-title"><span class="icon">📊</span> 島根県の医療全体の問題点 — 5分でつかむ</div>
+    <button class="reveal-btn" onclick="toggleAnswer(this)">▶ 全体まとめを見る</button>
+    <div class="answer-content" style="display:none">
+      <p style="font-size:13px;color:var(--text-light)">保健医療計画全体を通じて繰り返し登場する課題を整理。面接で「島根の医療問題全般」を問われたら、この5点を核に答えよう。</p>
+      <ol style="line-height:2.2;font-size:14px">
+        <li><strong>医師不足・偏在</strong>：全診療科で医師が不足。特に救急・産科・小児科。中山間地・離島の診療所医師の高齢化と後継者不足。</li>
+        <li><strong>地理的アクセス格差</strong>：東西200km超の細長い県土。中山間地・離島では救急車の到着時間が延長。ドクターヘリへの依存度が高い。</li>
+        <li><strong>高齢化と医療需要の増大</strong>：全国トップクラスの高齢化率。救急搬送件数は増加傾向。認知症・在宅医療の需要が急増。</li>
+        <li><strong>原子力災害リスク</strong>：島根原発（全国唯一・県庁所在地最近隣の原発）への特殊対応。放射線被ばく医療体制の整備が必要。</li>
+        <li><strong>医療・介護の連携不足</strong>：急性期後の転院・在宅移行が円滑でない。地域包括ケアシステムの構築が急務。</li>
+      </ol>
+      <div style="background:rgba(99,102,241,.15);border:1px solid rgba(99,102,241,.4);border-radius:6px;padding:10px;margin-top:8px;font-size:13px">
+        💡 <strong>島根大学はこれらに正面から応える:</strong> ACS講座（外傷・救急）＋ DMAT指定医療機関（災害）＋ 地域医療実習（僻地・離島）＋ 6年一貫英語教育（グローバル対応）＋ 早期体験実習（1年次から現場）
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-btns">
+    <button class="nav-btn prev" onclick="goTo('interview')">← 面接対策</button>
+    <button class="nav-btn next" onclick="goTo('p1')">問題演習へ →</button>
+  </div>
 </div>
 
 </main>
@@ -1781,7 +1913,7 @@ function updateProgress() {
 buildVocabList();
 
 // === Keyboard shortcut: left/right arrows ===
-const pages = ['p1','p2','p3','p4','p5','p6','vocab','interview'];
+const pages = ['p1','p2','p3','p4','p5','p6','vocab','interview','policy'];
 document.addEventListener('keydown', (e) => {
   const current = pages.findIndex(p => document.getElementById(p).classList.contains('active'));
   if (e.key === 'ArrowRight' && current < pages.length - 1) goTo(pages[current + 1]);
